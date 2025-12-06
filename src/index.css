@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-in 0.3s both;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-in 0.6s both;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-slide-up-delay {
+    animation: slideUp 0.8s ease-out 0.2s both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes custom-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Add this to your global CSS file (e.g., globals.css) */
+
+/* 1. Initial State (Hidden) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px); /* Move down slightly */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.1s; /* Slight delay for better effect */
+}
+
+/* 2. Target State (Visible and Animated) */
+.scroll-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* आपकी CSS फ़ाइल */
+@keyframes custom-float {
+  0%, 100% {
+    transform: translateX(0) ;
+  }
+  50% {
+    transform: translateX(-8px) ; /* Y = upar ki side */
+  }
+}
+
+
+.custom-float-animation {
+  animation: custom-float 3.5s ease-in-out infinite; /* 2.5 सेकंड में धीरे-धीरे अनंत बार */
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 1rem; /* same as rounded-2xl */
+}
+
+.gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ffffff57, #3b82f65c, #a855f757, #06b6d4);
+    background-size: 300% 300%;
+    animation: gradientBorderMove 4s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes gradientBorderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@font-face {
+  font-family: "PlayfairDisplay-VariableFont_wght";
+  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("woff2"),
+       url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("woff");
+  font-display: swap;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+     font-family: "PlayfairDisplay-VariableFont_wght", sans-serif;
+
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900; /* variable range */
+  font-style: normal;
+  font-display: swap;
+}
+
+body, p, a, span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0px;
+}
+
+body {
+  cursor: none;
+}
+
+.pulse {
+	border-radius: 50%;
+	background-image: radial-gradient(hsla(0, 0%, 100%, 0), hsla(112, 58%, 47%, 0));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.pulse::before, .pulse::after {
+	content: '';
+	position: absolute;
+	width: calc(100%);
+	height: calc(100%);
+	border-radius: 50%;
+	border: 1px solid rgb(8, 145, 178);
+	animation: calling 2s ease-in-out infinite;
+}
+
+.pulse::after {
+	animation: calling 2s ease-in-out .35s infinite;
+}
+
+@keyframes calling {
+	0% {
+		width: calc(100%);     
+    height: calc(100%);
+		opacity: 1;
+	}
+	100% {
+		width: calc(100% + 30px);     
+    height: calc(100% + 30px);
+		opacity: 0;
+	}
+}
+/* about-section*/
+@layer utilities {
+  @keyframes floatRandom {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(40px, -30px); }
+    50% { transform: translate(-20px, 20px); }
+    75% { transform: translate(30px, 40px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .animate-random {
+    animation: floatRandom 6s ease-in-out infinite;
+  }
+}
+
