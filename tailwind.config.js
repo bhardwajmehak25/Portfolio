@@ -3,7 +3,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      // एनीमेशन को यहां जोड़ें
+          keyframes: {
+              fade: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+            },
+            animation: {
+              fade: "fade 0.8s ease-in-out",
+            },
+     
       animation: {
         float: 'float 3s ease-in-out infinite',
       },
