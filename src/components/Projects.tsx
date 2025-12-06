@@ -30,7 +30,7 @@ import useScrollReveal from '../hooks/useScrollReveal';
       title: 'Portfolio Template',
       description: 'Clean and elegant portfolio template for creatives, featuring grid layouts and image galleries.',
       tags: ['HTML', 'CSS', 'Responsive'],
-      image: '/landing-page.png',
+      image: '/ landing-page.png',
       gradient: 'from-purple-500 to-pink-500'
     }
   ];
