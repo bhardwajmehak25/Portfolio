@@ -6,15 +6,18 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CursorFollower from './components/CursorFollower';
 import BackgroundAnimation from './components/BackgroundAnimation';
-
+import ServicesSection from './components/ServicesSection';
+import NavigationOnly from './components/header';
 
 function App() {
   return (
     <div className="min-h-screen bg-black">
+      <NavigationOnly />
       <CursorFollower />
- <BackgroundAnimation />
+      <BackgroundAnimation />
       <Hero />
       <About />
+      <ServicesSection />
       <Skills />
       <Projects />
       <Contact />

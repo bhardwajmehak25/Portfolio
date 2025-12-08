@@ -9,7 +9,7 @@ const Hero = () => {
   const heroRef = useScrollReveal();
 
   return (
-    <section ref={heroRef} className="z-40 relative min-h-screen flex items-center justify-center overflow-hidden scroll-reveal">
+    <section ref={heroRef} className="hero z-40 relative min-h-screen flex items-center justify-center overflow-hidden scroll-reveal">
       <div className="absolute inset-0 bg-grid-gray-800 [mask-image:radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent_85%)]"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -70,7 +70,10 @@ const Hero = () => {
 
       <button
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-gray-700"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+               animate-bounce cursor-pointer bg-gray-800 p-3 
+               rounded-full shadow-lg hover:shadow-xl 
+               transition-all hover:bg-gray-700"
       >
         <ArrowDown size={24} className="text-cyan-400" />
       </button>

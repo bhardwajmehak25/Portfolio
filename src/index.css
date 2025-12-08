@@ -188,4 +188,13 @@ body {
     animation: floatRandom 6s ease-in-out infinite;
   }
 }
-
+@media screen {
+  button{
+    padding: 14px 16px;
+    font-size: 13px;
+}
+.hero{
+   min-height: 80vh;
+}
+  
+}

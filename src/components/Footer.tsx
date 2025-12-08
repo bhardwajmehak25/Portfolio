@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white py-12 z-40 relative">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
 
           {/* LOGO + Rotating Developer Line */}
@@ -32,7 +32,7 @@ const Footer = () => {
             {/* Rotating Titles */}
             <p
               key={currentIndex}
-              className="text-cyan-300 text-md mb-3 transition-opacity duration-700 animate-fade"
+              className="text-cyan-300 text-md mb-3 transition-opacity duration-700 animate-flip"
             >
               {roles[currentIndex]}
             </p>

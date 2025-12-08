@@ -33,7 +33,7 @@ const About = () => {
         
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Me
+            About <span className="text-cyan-400">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto"></div>
         </div>
@@ -69,8 +69,8 @@ const About = () => {
 
           {/* IMAGE */}
           <div className="relative z-20">
-            <div className="aspect-square bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
-              <img src={MehakImg} alt="frontend-developer" />
+            <div className="h-full w-full bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
+              <img className="md:h-[55vh] max-w-[1000px] w-full h-full"  src="\mehak-about.png" alt="frontend-developer" />
             </div>
           </div>
 
