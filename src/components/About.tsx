@@ -70,7 +70,7 @@ const About = () => {
           {/* IMAGE */}
           <div className="relative z-20">
             <div className="h-full w-full bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
-              <img className="about-img md:h-[55vh] max-w-[1000px] w-full h-full"  src="\mehak-about.png" alt="frontend-developer" />
+              <img className="about-img md:h-[45vh] max-w-[1000px] w-full h-full"  src="\mehak-about.png" alt="frontend-developer" />
             </div>
           </div>
 
