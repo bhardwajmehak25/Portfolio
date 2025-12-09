@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24  text-white relative scroll-reveal z-40">
+    <section ref={sectionRef} id="services" className="py-24  text-white relative scroll-reveal z-40">
       <div className="max-w-7xl mx-auto px-6 text-center">
         
         {/* Section Label */}

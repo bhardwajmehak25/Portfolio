@@ -188,7 +188,7 @@ body {
     animation: floatRandom 6s ease-in-out infinite;
   }
 }
-@media screen {
+@media (max-width: 769px) {
   button{
     padding: 14px 16px;
     font-size: 13px;
@@ -196,5 +196,14 @@ body {
 .hero{
    min-height: 80vh;
 }
-  
+  .about-img{
+    height: 32vh !important;
+    object-fit: cover;
+}
+img.projectS{
+   height: 10vh !important;
+}
+#about, .hero, #services, #skills, #projects, #contect {
+    padding: 30px 0;
+}
 }

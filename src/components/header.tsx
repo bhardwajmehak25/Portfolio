@@ -7,10 +7,9 @@ const Navbar = () => {
 
     const projects = [
         "/briiliantroots.png",
-        "/customfastiontab.png",
+        "/battagaliya.png",
         "/ethniqly.png",
         "/manaliexplore.png",
-        "/restra.png",
     ];
 
     return (
@@ -35,21 +34,21 @@ const Navbar = () => {
                     className="absolute top-5 right-5"
                     onClick={() => setOpen(false)}
                 >
-                    <X size={32} className="text-lime-300 font-bold" />
+                    <X size={32} className="text-black bg-white font-bold rounded-full sm:py-1 px-1"  />
                 </button>
                 <div className="grid md:grid-cols-[75%_25%] gap-4 items-start">
 
                     {/* PROJECT GRID BELOW MENU */}
-                    <div className="grid md:grid-cols-2 w-full gap-4 overflow-y-auto pr-2">
+                    <div className="grid grid-cols-2 w-full gap-4 overflow-x-auto pb-2">
                         {projects.map((src, index) => (
                             <div
                                 key={index}
-                                className="w-full rounded-xl overflow-hidden border border-white/20"
+                                className=" w-full rounded-xl overflow-hidden border border-white/20"
                             >
                                 <img
                                     src={src}
                                     alt="project"
-                                    className="w-full h-[40vh] object-cover hover:scale-105 transition"
+                                    className="projectS w-full h-[40vh] object-cover hover:scale-105 transition"
                                 />
                             </div>
                         ))}
