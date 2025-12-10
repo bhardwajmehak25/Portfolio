@@ -201,7 +201,7 @@ body {
     object-fit: cover;
 }
 img.projectS{
-   height: 26vh !important;
+   height: 15vh !important;
 }
 #about, .hero, #services, #skills, #projects, #contect {
     padding: 30px 0;
