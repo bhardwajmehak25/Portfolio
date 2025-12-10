@@ -8,6 +8,7 @@ import CursorFollower from './components/CursorFollower';
 import BackgroundAnimation from './components/BackgroundAnimation';
 import ServicesSection from './components/ServicesSection';
 import NavigationOnly from './components/header';
+import Marquee from './components/Marquee-Slider';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <About />
       <ServicesSection />
+      <Marquee />
       <Skills />
       <Projects />
       <Contact />

@@ -1,15 +1,14 @@
 import { Code2, Heart, Sparkles } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import FluidGridBackground from './FluidGridBackground';
-import MehakImg from '../assets/images/Mehak.webp';
 
 
 const About = () => {
   const aboutRef = useScrollReveal();
 
   return (
- <section ref={aboutRef} id="about" className="py-24 bg-gray-950 scroll-reveal relative overflow-hidden z-40">
-      
+    <section ref={aboutRef} id="about" className="py-24 bg-gray-950 scroll-reveal relative overflow-hidden z-40">
+
       <FluidGridBackground />
       {/* FULL SECTION FLOATING CIRCLES */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -30,7 +29,7 @@ const About = () => {
 
       {/* CONTENT */}
       <div className="relative z-20 max-w-6xl mx-auto px-6">
-        
+
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             About <span className="text-cyan-400">Me</span>
@@ -39,14 +38,18 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          
+
           {/* TEXT */}
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a passionate frontend developer...
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              My approach combines clean code...
+              I’m Mehak, a developer focused on creating meaningful digital experiences.
+              I work with modern web technologies to build interfaces that are clean, intuitive, and visually engaging.</p>
+
+            <p className="text-lg text-gray-300 leading-relaxed"> My goal is simple — build websites that leave a strong impression and offer a smooth user experience.
+              Always learning. Always improving. Always creating.</p>
+            <p className="mt-3 font-bold text-lg text-gray-300 leading-relaxed">
+              Let’s collaborate and make something awesome.
+
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -68,15 +71,30 @@ const About = () => {
           </div>
 
           {/* IMAGE */}
-          <div className="relative z-20">
+          <div className="relative z-20 group">
             <div className="h-full w-full bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/50 flex items-center justify-center">
-              <img className="about-img md:h-[45vh] max-w-[1000px] w-full h-full"  src="\mehak-about.png" alt="frontend-developer" />
+
+              {/* First Image (Default) */}
+              <img
+                className="about-img md:h-[500px] object-cover max-w-[1200px] w-full h-full transition-opacity duration-500 group-hover:opacity-0"
+                src="/about-image.png"
+                alt="frontend-developer"
+              />
+
+              {/* Second Image (Hover Image) */}
+              <img
+                className="about-img md:h-[500px] object-cover max-w-[1200px] w-full h-full absolute top-0 left-0 transition-opacity rounded-lg duration-500 opacity-0 group-hover:opacity-100"
+                src="/mehak-about.png"
+                alt="frontend-developer-hover"
+              />
+
             </div>
           </div>
 
+
         </div>
       </div>
-</section>
+    </section>
 
   );
 };

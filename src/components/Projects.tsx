@@ -5,15 +5,16 @@ import useScrollReveal from "../hooks/useScrollReveal";
 const Projects = () => {
   const projectsRef = useScrollReveal();
   const [activeFilter, setActiveFilter] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(3); // ← Show 6 items initially
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const projects = [
     {
       title: "E-Commerce Fashion Store",
-      description: "A fully responsive Shopify store with custom theme.",
-      tags: ["Shopify", "CSS", "JavaScript"],
-      category: "Shopify",
+      description: "A fully responsive e-commerce store with custom theme.",
+      tags: ["WordPress", "CSS", "JavaScript"],
+      category: "WordPress",
       image: "/customfastionlab.png",
+      link: "https://balodana.com/", // ADD LINK
     },
     {
       title: "Corporate WordPress Site",
@@ -22,14 +23,16 @@ const Projects = () => {
       category: "WordPress",
       image: "/worpressstatic.png",
       gradient: "from-green-500 to-emerald-500",
+      link: "https://jmstmow.com/", // ADD LINK
     },
     {
       title: "Restaurant Landing Page",
       description: "Modern landing page with animations and reservations.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      category: "HTML",
+      tags: ["WordPress", "JavaScript"],
+      category: "WordPress",
       image: "/restra.png",
       gradient: "from-orange-500 to-red-500",
+      link: "https://dev.b2btail.com/battaglia/", // ADD LINK
     },
     {
       title: "Portfolio Template",
@@ -38,34 +41,49 @@ const Projects = () => {
       category: "Custom",
       image: "/landing-page.png",
       gradient: "from-purple-500 to-pink-500",
+      link: "https://yourportfoliotemplate.com", // ADD LINK
     },
-
-    // Add more projects if needed...
     {
       title: "Extra Project 1",
       description: "More project demo.",
       tags: ["HTML"],
       category: "HTML",
-      image: "/restra.png",
+      image: "/httt.png",
+      link: "https://himachaltourandtravels.com/",
     },
     {
       title: "Extra Project 2",
       description: "More project demo.",
       tags: ["Custom"],
       category: "Custom",
-      image: "/landing-page.png",
+      image: "/snowview.png",
+      link: "https://example.com/project2",
+    },
+    {
+      title: "Extra Project 2",
+      description: "More project demo.",
+      tags: ["Custom"],
+      category: "Custom",
+      image: "/siara.png",
+      link: "https://siarabyark.com/",
+    },
+    {
+      title: "Extra Project 2",
+      description: "More project demo.",
+      tags: ["Custom"],
+      category: "Custom",
+      image: "/grown.png",
+      link: "https://www.growneternal.com/",
     },
   ];
 
   const filters = ["All", "Shopify", "WordPress", "HTML", "Custom"];
 
-  // Filter Logic
   const filteredProjects =
     activeFilter === "All"
       ? projects
       : projects.filter((p) => p.category === activeFilter);
 
-  // Apply visible limit
   const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   return (
@@ -75,10 +93,11 @@ const Projects = () => {
       className="py-24 bg-gradient-to-b from-gray-950 to-black relative scroll-reveal z-40"
     >
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured<span className="text-cyan-400"> Projects</span>
+            Featured <span className="text-cyan-400">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mb-6"></div>
 
@@ -89,7 +108,7 @@ const Projects = () => {
                 key={idx}
                 onClick={() => {
                   setActiveFilter(filter);
-                  setVisibleCount(6); // reset when filter changes
+                  setVisibleCount(6);
                 }}
                 className={`px-5 py-2 rounded-full text-sm font-medium border transition-all ${
                   activeFilter === filter
@@ -116,9 +135,13 @@ const Projects = () => {
                 key={index}
                 className="group bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 border border-gray-800 hover:border-cyan-600 hover:-translate-y-2"
               >
-                {/* Image Section */}
-                <div
-                  className={`h-48 relative overflow-hidden ${
+
+                {/* CLICKABLE IMAGE WITH LINK */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block h-48 relative overflow-hidden ${
                     hasImage ? "bg-cover bg-center" : gradientClass
                   }`}
                   style={
@@ -130,6 +153,7 @@ const Projects = () => {
                   }
                 >
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="flex gap-4">
                       <button className="p-3 bg-gray-900 rounded-full hover:scale-110 transition-transform">
@@ -140,7 +164,7 @@ const Projects = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
 
                 {/* Content */}
                 <div className="p-6">
