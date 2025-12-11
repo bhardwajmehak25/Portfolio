@@ -43,7 +43,7 @@ const Navbar = () => {
                         {projects.map((src, index) => (
                             <div
                                 key={index}
-                                className=" w-full rounded-xl overflow-hidden border border-white/20"
+                                className=" w-full rounded-lg overflow-hidden border border-white/20"
                             >
                                 <img
                                     src={src}
@@ -55,10 +55,10 @@ const Navbar = () => {
                     </div>
                     {/* MENU ITEMS */}
                     <ul className="space-y-6 text-xl font-semibold ">
-                        <li className="hover:text-lime-300 cursor-pointer">Portfolio</li>
-                        <li className="hover:text-lime-300 cursor-pointer">About Us</li>
-                        <li className="hover:text-lime-300 cursor-pointer">My Projects</li>
-                        <li className="hover:text-lime-300 cursor-pointer">Download CV</li>
+                        <li className="hover:text-white cursor-pointer">Portfolio</li>
+                        <li className="hover:text-white cursor-pointer">About Us</li>
+                        <li className="hover:text-white cursor-pointer">My Projects</li>
+                        <li className="hover:text-white cursor-pointer">Download CV</li>
                     </ul>
 
                 </div>
